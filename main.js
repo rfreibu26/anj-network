@@ -37,6 +37,19 @@
   document.addEventListener('click', e=>{ if(open&&!nav.contains(e.target)&&!tog.contains(e.target)) close(); });
 })();
 
+/* ── Mobile services accordion ── */
+(function(){
+  document.querySelectorAll('.mob-has-sub').forEach(btn=>{
+    const sub = btn.nextElementSibling;
+    if(!sub) return;
+    btn.addEventListener('click', ()=>{
+      const expanded = btn.getAttribute('aria-expanded')==='true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      sub.classList.toggle('open', !expanded);
+    });
+  });
+})();
+
 /* ── FAQ accordion ── */
 (function(){
   document.querySelectorAll('.faq-item').forEach(item=>{
