@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(__NEW_LINE_6be5599075c16e27__ OLD='<ul class=\"\"nav-list\"\"><li><a href=\"\"../index.html\"\" class=\"\"nav-lk\"\">Home</a></li><li><a href=\"\"../about.html\"\" class=\"\"nav-lk\"\">About</a></li><li><a href=\"\"../services.html\"\" class=\"\"nav-lk active\"\">Services</a></li><li><a href=\"\"../naas.html\"\" class=\"\"nav-lk nav-lk-hi\"\">NaaS</a></li><li><a href=\"\"../contact.html\"\" class=\"\"nav-lk\"\">Contact</a></li></ul>')",
+      "Bash(NEW='<ul class=\"\"nav-list\"\"><li class=\"\"nav-item\"\"><a href=\"\"../index.html\"\" class=\"\"nav-lk\"\">Home</a><div class=\"\"nav-tooltip\"\">Return to the homepage</div></li><li class=\"\"nav-item\"\"><a href=\"\"../about.html\"\" class=\"\"nav-lk\"\">About</a><div class=\"\"nav-tooltip\"\">Our story, mission &amp; values</div></li><li class=\"\"nav-item\"\"><a href=\"\"../services.html\"\" class=\"\"nav-lk active\"\">Services</a><div class=\"\"nav-tooltip\"\">Full IT &amp; network service portfolio</div></li><li class=\"\"nav-item\"\"><a href=\"\"../naas.html\"\" class=\"\"nav-lk nav-lk-hi\"\">NaaS</a><div class=\"\"nav-tooltip\"\">Network as a Service \\\\&#x2014; our flagship offering</div></li><li class=\"\"nav-item\"\"><a href=\"\"../contact.html\"\" class=\"\"nav-lk\"\">Contact</a><div class=\"\"nav-tooltip\"\">Get in touch or request a quote</div></li></ul>')",
+      "Bash(__NEW_LINE_6be5599075c16e27__ for:*)",
+      "Bash(do)",
+      "Bash(python3 -c \":*)"
+    ]
+  }
+}

@@ -12,7 +12,7 @@
 <meta property="og:url" content="https://www.anjnetworksolutions.com/"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Anantason+Expanded:wght@600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="styles.css"/>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://www.anjnetworksolutions.com/#org","name":"ANJ Network Solutions","url":"https://www.anjnetworksolutions.com","foundingDate":"2016","logo":"https://www.anjnetworksolutions.com/assets/anj-logo.png","description":"Professional IT and network engineering company delivering enterprise-grade technology solutions to growing businesses, multi-site organizations, and regulated environments."}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Network as a Service (NaaS)?","acceptedAnswer":{"@type":"Answer","text":"NaaS is a subscription-based model where networking hardware, monitoring, support, and lifecycle management are delivered as a single managed service for a predictable monthly fee — replacing large upfront hardware purchases."}},{"@type":"Question","name":"What IT services does ANJ offer?","acceptedAnswer":{"@type":"Answer","text":"ANJ offers Managed IT Services, Network Infrastructure & Engineering, Cybersecurity, Cloud & Hybrid Solutions, IT Consulting & Architecture, Voice & Phone Systems, and Network as a Service (NaaS)."}},{"@type":"Question","name":"How long has ANJ been in business?","acceptedAnswer":{"@type":"Answer","text":"ANJ Network Solutions was founded in 2016 and has been delivering enterprise IT and network engineering solutions since then."}},{"@type":"Question","name":"Does ANJ support multi-site organizations?","acceptedAnswer":{"@type":"Answer","text":"Yes. ANJ specializes in scalable, multi-site ready architectures and centralized management across multiple locations — especially through its NaaS model."}}]}</script>
@@ -28,11 +28,47 @@
     </a>
     <nav class="main-nav" aria-label="Main navigation">
       <ul class="nav-list">
-        <li><a href="index.html" class="nav-lk active">Home</a></li>
-        <li><a href="about.html" class="nav-lk">About</a></li>
-        <li><a href="services.html" class="nav-lk">Services</a></li>
-        <li><a href="naas.html" class="nav-lk nav-lk-hi">NaaS</a></li>
-        <li><a href="contact.html" class="nav-lk">Contact</a></li>
+        <li class="nav-item"><a href="index.html" class="nav-lk active">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-lk">About</a></li>
+        <li class="nav-item has-mega">
+          <a href="services.html" class="nav-lk">Services <span class="nav-chevron">▾</span></a>
+          <div class="mega-menu">
+            <div class="ctr mega-inner">
+              <div class="mega-hd">
+                <span class="mega-label">Our Services</span>
+                <a href="services.html" class="mega-all">View all services →</a>
+              </div>
+              <div class="mega-grid">
+                <a href="services/managed-it.html" class="mega-card">
+                  <div class="mega-card-icon">🖥</div>
+                  <div><h4 class="mega-card-title">Managed IT Services</h4><p class="mega-card-desc">Proactive monitoring, patch management &amp; 24/7 support.</p><span class="mega-card-lk">Learn more →</span></div>
+                </a>
+                <a href="services/network-infrastructure.html" class="mega-card">
+                  <div class="mega-card-icon">🔗</div>
+                  <div><h4 class="mega-card-title">Network Infrastructure</h4><p class="mega-card-desc">Enterprise LAN, WAN, Wi-Fi &amp; data center design.</p><span class="mega-card-lk">Learn more →</span></div>
+                </a>
+                <a href="services/cybersecurity.html" class="mega-card">
+                  <div class="mega-card-icon">🛡</div>
+                  <div><h4 class="mega-card-title">Cybersecurity</h4><p class="mega-card-desc">Layered security, firewall management &amp; threat detection.</p><span class="mega-card-lk">Learn more →</span></div>
+                </a>
+                <a href="services/cloud-solutions.html" class="mega-card">
+                  <div class="mega-card-icon">☁</div>
+                  <div><h4 class="mega-card-title">Cloud Solutions</h4><p class="mega-card-desc">Secure cloud &amp; hybrid architectures for performance and DR.</p><span class="mega-card-lk">Learn more →</span></div>
+                </a>
+                <a href="services/it-consulting.html" class="mega-card">
+                  <div class="mega-card-icon">📋</div>
+                  <div><h4 class="mega-card-title">IT Consulting</h4><p class="mega-card-desc">Strategic assessments, roadmaps &amp; vendor guidance.</p><span class="mega-card-lk">Learn more →</span></div>
+                </a>
+                <a href="naas.html" class="mega-card feat">
+                  <div class="mega-card-icon">⚡</div>
+                  <div><h4 class="mega-card-title">Network as a Service</h4><p class="mega-card-desc">Your entire network for one predictable monthly fee.</p><span class="mega-card-lk">Explore NaaS →</span></div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item"><a href="naas.html" class="nav-lk nav-lk-hi">NaaS</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-lk">Contact</a></li>
       </ul>
     </nav>
     <div class="hd-cta"><a href="contact.html#form" class="btn btn-primary btn-sm">Request a Quote</a></div>
@@ -55,12 +91,12 @@
 <main>
 
 <!-- HERO -->
-<section class="hero" id="hero">
+<section class="hero" id="hero" style="background:linear-gradient(to right,#0B2C6B 0%,#0B2C6B 42%,rgba(11,44,107,.75) 62%,rgba(11,44,107,.1) 100%),url('assets/hero-bg.png') right center/55% auto no-repeat,#0B2C6B">
   <div class="hero-bg" aria-hidden="true"></div>
   <div class="ctr hero-inner">
     <div class="hero-content reveal">
       <div class="hero-badge">Since 2016 · Engineering-First</div>
-      <h1 class="hero-h1">Enterprise IT &amp; Network Solutions <em>Built for Growth</em></h1>
+      <h1 class="hero-h1">Enterprise Networking Simplified <em>Delivered as a Service</em></h1>
       <p class="hero-lead">Managed IT, Cybersecurity, Cloud, and Network as a Service — engineered for modern businesses.</p>
       <div class="hero-acts">
         <a href="contact.html#form" class="btn btn-primary btn-lg">Request a Quote</a>
@@ -285,9 +321,9 @@
     <address style="font-style:normal">
       <h4 class="ft-nav-title">Contact</h4>
       <ul class="ft-ci-list">
-        <li><span class="ft-ci-icon">📍</span><span>[TODO: Address]</span></li>
-        <li><span class="ft-ci-icon">📞</span><a href="tel:TODO" class="ft-lk">[TODO: Phone]</a></li>
-        <li><span class="ft-ci-icon">✉</span><a href="mailto:info@anjnetworksolutions.com" class="ft-lk">[TODO: Email]</a></li>
+        <li><span class="ft-ci-icon">📍</span><span>Servicing USA &amp; Panama</span></li>
+        <li><span class="ft-ci-icon">📞</span><a href="tel:+19542280940" class="ft-lk">+1 (954) 228-0940</a></li>
+        <li><span class="ft-ci-icon">✉</span><a href="mailto:info@anjnetworks.com" class="ft-lk">info@anjnetworks.com</a></li>
       </ul>
     </address>
   </div>

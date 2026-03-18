@@ -1,7 +1,7 @@
 /* ============================================================
    ANJ NETWORK SOLUTIONS — styles.css
    Design System: Deep Navy + Cyan + Emerald
-   Fonts: Syne (headings) + DM Sans (body)
+   Fonts: Anantason Expanded (headings) + DM Sans (body)
    ============================================================ */
 
 :root {
@@ -22,7 +22,7 @@
   --shadow-sm:   0 1px 3px rgba(11,44,107,.06);
   --shadow-md:   0 4px 24px rgba(11,44,107,.08);
   --shadow-lg:   0 8px 40px rgba(11,44,107,.13);
-  --font-h:      'Syne', sans-serif;
+  --font-h:      'Anantason Expanded', sans-serif;
   --font-b:      'DM Sans', sans-serif;
   --r-sm: 4px; --r-md: 8px; --r-lg: 12px; --r-xl: 16px; --r-full: 9999px;
   --max-w: 1200px;
@@ -85,6 +85,29 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .nav-lk:hover,.nav-lk.active{background:var(--ice);color:var(--navy)}
 .nav-lk-hi{color:var(--cyan);font-weight:600}
 .nav-lk-hi:hover{background:var(--cyan-light);color:var(--cyan-dark)}
+
+/* ── MEGA MENU ── */
+.nav-item{position:static;display:flex;align-items:center;height:var(--hh)}
+.nav-chevron{display:inline-block;font-size:.55rem;margin-left:.3rem;transition:transform var(--ease);line-height:1;vertical-align:middle}
+.has-mega:hover .nav-chevron{transform:rotate(180deg)}
+.mega-menu{position:fixed;top:var(--hh);left:0;right:0;background:var(--white);border-top:2px solid var(--cyan);box-shadow:0 8px 40px rgba(11,44,107,.13);opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .22s ease,transform .22s ease,visibility .22s ease;z-index:200;pointer-events:none}
+.has-mega:hover .mega-menu,.mega-menu:hover{opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto}
+.mega-inner{padding:2rem 0 2.5rem}
+.mega-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem}
+.mega-label{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan)}
+.mega-all{font-size:.875rem;font-weight:600;color:var(--navy);transition:color var(--ease)}
+.mega-all:hover{color:var(--cyan)}
+.mega-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem}
+.mega-card{display:flex;align-items:flex-start;gap:1rem;padding:1.25rem;border-radius:var(--r-lg);border:1px solid transparent;transition:background var(--ease),border-color var(--ease),box-shadow var(--ease)}
+.mega-card:hover{background:var(--ice);border-color:var(--border);box-shadow:var(--shadow-sm)}
+.mega-card-icon{font-size:1.6rem;flex-shrink:0;margin-top:.1rem}
+.mega-card-title{font-family:var(--font-h);font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:.3rem;line-height:1.2}
+.mega-card-desc{font-size:.8rem;color:var(--slate-light);line-height:1.5}
+.mega-card-lk{display:inline-block;font-size:.75rem;font-weight:600;color:var(--cyan);margin-top:.5rem;transition:gap var(--ease)}
+.mega-card.feat{border-color:rgba(45,158,107,.25);background:var(--green-light)}
+.mega-card.feat:hover{border-color:var(--green);background:var(--green-light)}
+.mega-card.feat .mega-card-title{color:var(--green-dark)}
+.mega-card.feat .mega-card-lk{color:var(--green-dark)}
 .hd-cta{flex-shrink:0}
 .nav-tog{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:40px;height:40px;border-radius:var(--r-md);transition:background var(--ease)}
 .nav-tog:hover{background:var(--ice)}
@@ -97,9 +120,9 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .mob-cta{margin-top:1.5rem;width:100%;justify-content:center}
 
 /* ── HERO ── */
-.hero{position:relative;min-height:calc(100vh - var(--hh));min-height:680px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 55%,#0E4B7A 100%);overflow:hidden;display:flex;align-items:center}
+.hero{position:relative;min-height:320px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 55%,#0E4B7A 100%);overflow:hidden;display:flex;align-items:center}
 .hero-bg{position:absolute;inset:0;background:radial-gradient(circle at 20% 30%,rgba(0,180,216,.12) 0%,transparent 50%),radial-gradient(circle at 80% 70%,rgba(45,158,107,.08) 0%,transparent 50%),repeating-linear-gradient(45deg,transparent,transparent 60px,rgba(255,255,255,.015) 60px,rgba(255,255,255,.015) 61px);pointer-events:none}
-.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:4rem;padding:5rem 0}
+.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:4rem;padding:1.75rem 0}
 .hero-badge{display:inline-flex;align-items:center;background:rgba(0,180,216,.15);border:1px solid rgba(0,180,216,.3);color:var(--cyan);font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:.35rem 1rem;border-radius:var(--r-full);margin-bottom:1.25rem}
 .hero-h1{font-family:var(--font-h);font-size:clamp(2.25rem,5vw,3.75rem);font-weight:800;color:var(--white);line-height:1.08;margin-bottom:1.5rem;letter-spacing:-.02em}
 .hero-h1 em{font-style:normal;color:var(--cyan);display:block}
