@@ -406,7 +406,15 @@ textarea{resize:vertical;min-height:140px}
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .55s ease,transform .55s ease}
 .reveal.vis{opacity:1;transform:translateY(0)}
 
+/* ── STORY GRID (about page) ── */
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+
+/* ── CONTACT OPTIONS GRID ── */
+.contact-opts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+
 /* ── RESPONSIVE ── */
+
+/* Tablet landscape / small desktop */
 @media(max-width:1024px){
   :root{--px:2rem}
   .svc-grid{grid-template-columns:repeat(2,1fr)}
@@ -425,43 +433,84 @@ textarea{resize:vertical;min-height:140px}
   .team-grid{grid-template-columns:repeat(2,1fr)}
 }
 
+/* Tablet portrait */
 @media(max-width:768px){
   :root{--px:1.25rem;--hh:64px}
   .main-nav,.hd-cta{display:none}
   .nav-tog{display:flex;margin-left:auto}
-  .hero-inner{grid-template-columns:1fr;padding:4rem 0;gap:3rem}
+  /* Hero */
+  .hero-inner{grid-template-columns:1fr;padding:3rem 0;gap:2rem}
   .hero-vis{order:-1}
-  .hero-illo{max-width:280px;margin:0 auto}
-  .hero-h1{font-size:2.25rem}
+  .hero-illo{max-width:260px;margin:0 auto;aspect-ratio:auto}
+  .hero-h1{font-size:clamp(1.75rem,6vw,2.25rem)}
   .hero-lead{font-size:1rem}
   .hero-trust{flex-direction:column;gap:.75rem}
-  .svc-grid,.svc-listing,.challenge-grid,.cs-grid,.included-grid{grid-template-columns:1fr}
+  /* Grids → 1 col */
+  .svc-grid,.svc-listing,.cs-grid,.included-grid{grid-template-columns:1fr}
+  .challenge-grid{grid-template-columns:repeat(2,1fr);gap:1rem}
   .why-grid{grid-template-columns:repeat(2,1fr)}
-  .values-grid{grid-template-columns:1fr}
-  .contact-wrap{grid-template-columns:1fr}
+  .values-grid{grid-template-columns:repeat(2,1fr)}
+  .story-grid{grid-template-columns:1fr;gap:2rem}
+  /* Contact */
+  .contact-opts-grid{grid-template-columns:1fr}
+  .contact-wrap{grid-template-columns:1fr;gap:2rem}
   .form-row{grid-template-columns:1fr}
-  .ft-inner{grid-template-columns:1fr;gap:2rem}
+  /* Footer */
+  .ft-inner{grid-template-columns:1fr 1fr;gap:2rem}
   .ft-bottom-inner{flex-direction:column;text-align:center}
-  .naas-steps{grid-template-columns:1fr 1fr}
+  /* NaaS */
+  .naas-steps{grid-template-columns:repeat(2,1fr)}
   .naas-step:nth-child(2)::after{display:none}
-  .benefits-grid{grid-template-columns:1fr}
+  .naas-step:nth-child(4)::after{display:none}
+  .benefits-grid{grid-template-columns:repeat(2,1fr)}
+  /* Stats */
   .stats-bar{grid-template-columns:repeat(2,1fr)}
-  .sec{padding:3.5rem 0}
-  .pg-hero{padding:3.5rem 0 3rem}
-  .sec-hd{margin-bottom:2.5rem}
+  .stats-bar .stat-item:nth-child(2){border-right:none}
+  .stat-item{padding:1.75rem 1rem}
+  /* Spacing */
+  .sec{padding:3rem 0}
+  .pg-hero{padding:3rem 0 2.5rem}
+  .sec-hd{margin-bottom:2rem}
+  .mission-box{padding:2rem}
+  /* Table */
+  .cmp-table{font-size:.8rem}
+  .cmp-table th,.cmp-table td{padding:.65rem .75rem}
 }
 
+/* Large phones / small tablets (600px) */
+@media(max-width:600px){
+  .challenge-grid{grid-template-columns:1fr}
+  .values-grid{grid-template-columns:1fr}
+  .team-grid{grid-template-columns:1fr}
+  .ft-inner{grid-template-columns:1fr;gap:2rem}
+}
+
+/* Small phones */
 @media(max-width:480px){
   :root{--px:1rem}
-  .why-grid{grid-template-columns:1fr}
+  /* Hero */
+  .hero-inner{padding:2.5rem 0;gap:1.5rem}
+  .hero-h1{font-size:1.75rem}
   .hero-acts,.naas-acts,.cta-band-acts{flex-direction:column}
   .hero-acts .btn,.naas-acts .btn,.cta-band-acts .btn{width:100%;justify-content:center}
+  /* Grids */
+  .why-grid{grid-template-columns:1fr}
+  .benefits-grid{grid-template-columns:1fr}
   .process-steps,.naas-steps{grid-template-columns:1fr}
   .naas-step::after{display:none}
   .stats-bar{grid-template-columns:1fr}
   .stat-item{border-right:none;border-bottom:1px solid rgba(255,255,255,.08)}
   .vendor-cats{grid-template-columns:repeat(2,1fr)}
-  .team-grid{grid-template-columns:1fr}
+  /* Spacing */
+  .sec{padding:2.5rem 0}
+  .pg-hero{padding:2.5rem 0 2rem}
+  .sec-hd{margin-bottom:1.75rem}
+  .hero-h1{letter-spacing:0}
+  /* Mobile sub-cards: 1 col */
+  .mob-sub-grid{grid-template-columns:1fr}
+  .mob-sub-card{padding:1rem}
+  /* Form */
+  .form-row{grid-template-columns:1fr}
 }
 
 @media(prefers-reduced-motion:reduce){
